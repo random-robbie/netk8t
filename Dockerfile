@@ -10,7 +10,7 @@ ENV BASE_URL="https://storage.googleapis.com/kubernetes-helm"
 ENV TAR_FILE="helm-v${HELM_VERSION}-linux-amd64.tar.gz"
 
 # Install requirements
-RUN apk add -U openssl curl tar git bash gcc gzip bash wget ca-certificates deps alpine-sdk unzip socat mysql-client sqlite netcat-openbsd
+RUN apk add -U openssl curl tar git bash gcc gzip bash wget ca-certificates alpine-sdk unzip socat mysql-client sqlite netcat-openbsd
 
 # Install python
 RUN apk add --update \
