@@ -21,8 +21,8 @@ RUN apk add --update \
 RUN pip install virtualenv requests awscli google-cloud-storage
 
 # Install kubectl
-RUN curl -L https://storage.googleapis.com/kubernetes-release/release/v$KUBE_VERSION/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl && \
-    chmod +x /usr/local/bin/kubectl && \
+RUN curl -L https://storage.googleapis.com/kubernetes-release/release/v$KUBE_VERSION/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl
+RUN chmod +x /usr/local/bin/kubectl
 
 # Install Helm
 RUN apk add --update --no-cache curl ca-certificates && \
