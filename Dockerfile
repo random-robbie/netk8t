@@ -17,8 +17,8 @@ RUN apk add --update \
     python \
     python-dev \
     py-pip \
-    build-base \
-  && pip install virtualenv requests aws-cli \
+    build-base
+RUN pip install virtualenv requests aws-cli
 
 # Install kubectl
 RUN curl -L https://storage.googleapis.com/kubernetes-release/release/v$KUBE_VERSION/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl && \
