@@ -18,7 +18,7 @@ RUN apk add --update \
     python-dev \
     py-pip \
     build-base
-RUN pip install virtualenv requests aws-cli
+RUN pip install virtualenv requests awscli google-cloud-storage
 
 # Install kubectl
 RUN curl -L https://storage.googleapis.com/kubernetes-release/release/v$KUBE_VERSION/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl && \
